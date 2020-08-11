@@ -18,6 +18,10 @@ view: call_delivery {
       label: "sigungu_population"
       url: "https://bespin.looker.com/explore/kb_project/seoul_population?fields=seoul_population.gungu,seoul_population.korean_10s_sum,seoul_population.korean_20s_sum,seoul_population.korean_30s_sum,seoul_population.korean_40s_sum,seoul_population.korean_50s_sum,seoul_population.korean_60s_sum&f[seoul_population.gungu]={{ value }}&limit=500"
     }
+    link: {
+      label: "male/female look"
+      url: "https://bespin.looker.com/looks/178?f[seoul_population.gungu]={{ value }}"
+    }
   }
 
   dimension_group: date {
