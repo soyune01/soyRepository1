@@ -14,6 +14,7 @@ persist_with: kb_project_default_datagroup
 explore: call_delivery {
   label: "seoul delivery call"
   join: seoul_weather {
+    fields: [seoul_weather.temperature_tier, seoul_weather.rainfall_range]
     type: left_outer
     sql_on: ${call_delivery.addr_sido} = ${seoul_weather.addr_sido}
             AND ${call_delivery.addr_sigungu} = ${seoul_weather.addr_sigungu}

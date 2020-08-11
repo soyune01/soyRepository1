@@ -57,6 +57,11 @@ view: call_delivery {
     sql: ${TABLE}.time_tier ;;
   }
 
+  dimension: call_cnt {
+    type: number
+    sql: ${TABLE}.call_cnt ;;
+  }
+
   measure: call_cnt_sum {
     type: sum
     sql: ${TABLE}.call_cnt ;;
