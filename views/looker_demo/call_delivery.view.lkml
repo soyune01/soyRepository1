@@ -14,6 +14,10 @@ view: call_delivery {
   dimension: addr_sigungu {
     type: string
     sql: ${TABLE}.addr_sigungu ;;
+    link: {
+      label: "sigungu_population"
+      url: "https://bespin.looker.com/explore/kb_project/seoul_population?fields=seoul_population.gungu,seoul_population.korean_10s_sum,seoul_population.korean_20s_sum,seoul_population.korean_30s_sum,seoul_population.korean_40s_sum,seoul_population.korean_50s_sum,seoul_population.korean_60s_sum&f[seoul_population.gungu]={{ value }}&limit=500"
+    }
   }
 
   dimension_group: date {
@@ -102,6 +106,6 @@ view: call_delivery {
 
   ##### field sets #####
   set: details {
-    fields: [date_date, time_tier, addr_sido, addr_sigungu, addr_dong, industry_item, call_cnt_sum, call_cnt_avg ]
+    fields: [date_date, time_tier, addr_sido, addr_sigungu, addr_dong, industry_item, call_cnt]
   }
 }

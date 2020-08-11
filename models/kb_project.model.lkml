@@ -24,19 +24,15 @@ explore: call_delivery {
             ;;
     relationship: many_to_one
   }
-  join: seoul_population {
-    fields: [seoul_population.population_total_sum, seoul_population.korean_female_sum, seoul_population.korean_male_sum, seoul_population.korean_total_sum, seoul_population.korean_10s_sum, seoul_population.korean_20s_sum, seoul_population.korean_30s_sum, seoul_population.korean_40s_sum, seoul_population.korean_50s_sum, seoul_population.korean_60s_sum]
-    type: left_outer
-    sql_on: ${call_delivery.addr_sido} = ${seoul_population.sido}
-            AND ${call_delivery.addr_sigungu} = ${seoul_population.gungu}
-            AND ${call_delivery.addr_dong} = ${seoul_population.dongmyeon}
-            ;;
-    relationship: many_to_one
-  }
 }
 
 explore: seoul_weather {
   label: "seoul wheather"
 }
+
+explore: seoul_population {
+  label: "seoul_population"
+}
+
 
 explore: nginx_access {}
