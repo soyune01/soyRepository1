@@ -13,9 +13,7 @@ persist_with: kb_project_default_datagroup
 
 explore: call_delivery {
   label: "seoul delivery call"
-  # fields: [orders.price, users.address]
   join: seoul_weather {
-    #fields: [seoul_weather.temperature, seoul_weather.temperature_avg, seoul_weather.rainfall] # join된 테이블에서 사용할 필드 지정
     type: left_outer
     sql_on: ${call_delivery.addr_sido} = ${seoul_weather.addr_sido}
             AND ${call_delivery.addr_sigungu} = ${seoul_weather.addr_sigungu}
